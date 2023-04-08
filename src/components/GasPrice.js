@@ -6,6 +6,7 @@ import { GasPriceContainer } from "../styles";
 
 const GasPrice = () => {
   const [gasPrice, setGasPrice] = useState(null);
+  const [countdown, setCountdown] = useState(10);
   const apiKey = process.env.REACT_APP_ETHERSCAN_API_KEY;
 
   useEffect(() => {
@@ -21,9 +22,19 @@ const GasPrice = () => {
       }
     };
 
-    const interval = setInterval(() => {
-      fetchGasPrice();
-    }, 10000); // Update every 10 seconds
+    const updateCountdown = () => {
+      setCountdown((prevCountdown) => {
+        if (prevCountdown === 1) {
+          fetchGasPrice();
+          return 10;
+        } else {
+          return prevCountdown - 1;
+        }
+      });
+    };
+
+    fetchGasPrice(); // Initial fetch
+    const interval = setInterval(updateCountdown, 1000); // Update countdown every second
 
     return () => clearInterval(interval);
   }, []);
@@ -31,7 +42,10 @@ const GasPrice = () => {
   return (
     <GasPriceContainer>
       {gasPrice ? (
-        <p>Current Gas Price: {gasPrice} Gwei</p>
+        <>
+          <p>Current Gas Price: {gasPrice} Gwei</p>
+          <p>Refreshing in {countdown} seconds...</p>
+        </>
       ) : (
         <p>Loading gas price...</p>
       )}

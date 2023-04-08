@@ -13,7 +13,7 @@ export const AppContainer = styled.div`
 
 export const AppHeader = styled.header`
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 `;
 
 export const GasPriceContainer = styled.div`
