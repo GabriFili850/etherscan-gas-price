@@ -1,5 +1,8 @@
+// src/GasPrice.js
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { GasPriceContainer } from "../styles";
 
 const GasPrice = () => {
   const [gasPrice, setGasPrice] = useState(null);
@@ -23,16 +26,16 @@ const GasPrice = () => {
     }, 10000); // Update every 10 seconds
 
     return () => clearInterval(interval);
-  }, [apiKey]);
+  }, []);
 
   return (
-    <div>
+    <GasPriceContainer>
       {gasPrice ? (
         <p>Current Gas Price: {gasPrice} Gwei</p>
       ) : (
         <p>Loading gas price...</p>
       )}
-    </div>
+    </GasPriceContainer>
   );
 };
 

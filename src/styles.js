@@ -1,12 +1,21 @@
 import styled from "styled-components";
 
-export const ContentWrapper = styled.div`
+export const AppContainer = styled.div`
+  text-align: center;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #282c34;
+  color: white;
 `;
 
-export const Title = styled.h1`
-  font-size: 20px;
+export const AppHeader = styled.header`
+  font-size: 2rem;
+  margin-bottom: 1rem;
+`;
+
+export const GasPriceContainer = styled.div`
+  font-size: 1.5rem;
 `;

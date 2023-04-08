@@ -1,15 +1,14 @@
 import React from "react";
 import GasPrice from "./components/GasPrice";
+import { AppContainer, AppHeader } from "./styles";
 
-import { ContentWrapper, Title } from "./styles";
-
-const App = () => {
+function App() {
   return (
-    <ContentWrapper>
-      <Title>Etherscan Gas Price</Title>
+    <AppContainer>
+      <AppHeader>Etherscan Gas Price</AppHeader>
       <GasPrice />
-    </ContentWrapper>
+    </AppContainer>
   );
-};
+}
 
 export default App;
