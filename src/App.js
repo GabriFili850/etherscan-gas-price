@@ -1,21 +1,14 @@
 import React from "react";
-import GasPrice from "./GasPrice";
+import GasPrice from "./components/GasPrice";
+
+import { ContentWrapper, Title } from "./styles";
 
 const App = () => {
   return (
-    <div
-      className='App'
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <header className='App-header'>
-        <h1>Etherscan Gas Price</h1>
-      </header>
+    <ContentWrapper>
+      <Title>Etherscan Gas Price</Title>
       <GasPrice />
-    </div>
+    </ContentWrapper>
   );
 };
 
