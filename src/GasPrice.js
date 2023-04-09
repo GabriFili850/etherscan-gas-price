@@ -1,8 +1,8 @@
 // src/GasPrice.js
 
 import React, { useState, useEffect } from "react";
-import axiosInstance from "./axiosInstance"; // Import the custom axios instance
-import { GasPriceContainer } from "./styles";
+import axios from "axios";
+import { GasPriceContainer } from "../styles";
 
 const GasPrice = () => {
   const [gasPrice, setGasPrice] = useState(null);
