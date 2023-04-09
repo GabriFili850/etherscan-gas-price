@@ -1,5 +1,3 @@
-// src/GasPrice.test.js
-
 import React from "react";
 import { render, screen, act } from "@testing-library/react";
 import axios from "axios";
@@ -22,7 +20,5 @@ describe("GasPrice component", () => {
 
     const gasPriceElement = screen.getByText(/Current Gas Price: 20.00 Gwei/i);
     expect(gasPriceElement).toBeInTheDocument();
-
-    // Add more tests here
   });
 });

@@ -1,5 +1,5 @@
 import React from "react";
-import GasPrice from "./components/GasPrice";
+import GasPrice from "./GasPrice";
 import { AppContainer, AppHeader } from "./styles";
 import EthereumLogo from "./ethereum-logo.svg";
 
