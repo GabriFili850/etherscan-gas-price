@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { GasPriceContainer } from "../styles";
+import { GasPriceContainer } from "./styles";
 
 const GasPrice = () => {
   const [gasPrice, setGasPrice] = useState(null);
