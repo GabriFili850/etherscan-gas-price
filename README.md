@@ -51,3 +51,10 @@ Styled Components
 Create React App
 
 Netlify (for deployment)
+
+## Live Demo
+Etherscan Gas Price Monitor is deployed on Netlify and can be accessed through this link:
+
+https://etherscan-gas-price-monitor.netlify.app/
+
+Feel free to visit the live demo to see the app in action without needing to set up the project locally.
