@@ -1,7 +1,7 @@
 import React from "react";
 import GasPrice from "./GasPrice";
 import { AppContainer, AppHeader } from "./styles";
-import EthereumLogo from "./ethereum-logo.svg";
+import EthereumLogo from "./images/ethereum-logo.svg";
 
 function App() {
   return (

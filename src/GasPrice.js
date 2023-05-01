@@ -4,8 +4,10 @@ import { GasPriceContainer } from "./styles";
 
 const GasPrice = () => {
   const [gasPrice, setGasPrice] = useState(null);
-  const [countdown, setCountdown] = useState(10);
+  const [countdown, setCountdown] = useState(15);
   const apiKey = process.env.REACT_APP_ETHERSCAN_API_KEY;
+
+  const REFRESH_INTERVAL = 15000; // 15 seconds
 
   useEffect(() => {
     const fetchGasPrice = async () => {
@@ -24,7 +26,7 @@ const GasPrice = () => {
       setCountdown((prevCountdown) => {
         if (prevCountdown === 1) {
           fetchGasPrice();
-          return 10;
+          return REFRESH_INTERVAL / 1000;
         } else {
           return prevCountdown - 1;
         }
