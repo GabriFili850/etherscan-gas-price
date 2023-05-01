@@ -17,6 +17,7 @@ To set up the Etherscan Gas Price Monitor, follow these steps:
 ### Clone the repository:
 
 git clone https://github.com/GabriFili850/etherscan-gas-price-monitor.git
+
 cd etherscan-gas-price-monitor
 
 ### Install the required dependencies:
