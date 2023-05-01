@@ -22,21 +22,21 @@ cd etherscan-gas-price-monitor
 
 ### Install the required dependencies:
 
-npm install
+`npm install`
 
 ### Create a .env.local file to store your Etherscan API key:
 
-touch .env.local
+`touch .env.local`
 
 ### Open the .env.local file and add your Etherscan API key:
 
-REACT_APP_ETHERSCAN_API_KEY=YOUR_ETHERSCAN_API_KEY
+`REACT_APP_ETHERSCAN_API_KEY=YOUR_ETHERSCAN_API_KEY`
 
 Replace YOUR_ETHERSCAN_API_KEY with your actual Etherscan API key. You can obtain one by signing up at https://etherscan.io/myapikey.
 
 ### Start the development server:
 
-npm start
+`npm start`
 
 The Etherscan Gas Price Monitor app should now be running on http://localhost:3000.
 
