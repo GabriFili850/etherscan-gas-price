@@ -4,7 +4,7 @@ This React application displays the current gas price on the Ethereum network in
 ## Features
 Displays the current gas price in Gwei format
 
-Automatically refreshes gas price data every 10 seconds
+Automatically refreshes gas price data every 15 seconds
 
 Countdown timer showing the time remaining until the next refresh
 
@@ -16,8 +16,8 @@ To set up the Etherscan Gas Price Monitor, follow these steps:
 
 ### Clone the repository:
 
-git clone https://github.com/yourusername/etherscan-gas-price.git
-cd etherscan-gas-price
+git clone https://github.com/GabriFili850/etherscan-gas-price-monitor.git
+cd etherscan-gas-price-monitor
 
 ### Install the required dependencies:
 
@@ -55,6 +55,6 @@ Netlify (for deployment)
 ## Live Demo
 Etherscan Gas Price Monitor is deployed on Netlify and can be accessed through this link:
 
-https://etherscan-gas-price-monitor.netlify.app/
+https://etherscan-gas-price-monitor.netlify.app
 
 Feel free to visit the live demo to see the app in action without needing to set up the project locally.
