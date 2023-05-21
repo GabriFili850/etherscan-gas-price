@@ -5,6 +5,8 @@ import { GasPriceContainer } from "./styles";
 const GasPrice = () => {
   const [gasPrice, setGasPrice] = useState(null);
   const [countdown, setCountdown] = useState(15);
+  const [error, setError] = useState(null);
+
   const apiKey = process.env.REACT_APP_ETHERSCAN_API_KEY;
 
   const REFRESH_INTERVAL = 15000; // 15 seconds
@@ -19,6 +21,7 @@ const GasPrice = () => {
         setGasPrice(gasPriceInGwei.toFixed(2));
       } catch (error) {
         console.error("Error fetching gas price:", error);
+        setError("Error fetching gas price"); // set the error message
       }
     };
 
@@ -41,7 +44,9 @@ const GasPrice = () => {
 
   return (
     <GasPriceContainer>
-      {gasPrice ? (
+      {error ? (
+        <p>{error}</p>
+      ) : gasPrice ? (
         <>
           <p>Current Gas Price: {gasPrice} Gwei</p>
           <p>Refreshing in {countdown} seconds...</p>
