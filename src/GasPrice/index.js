@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { GasPriceContainer } from "./styles";
+import { GasPriceContainer, GasPriceText, CountdownText } from "./styles";
 
 const GasPrice = () => {
   const [gasPrice, setGasPrice] = useState(null);
@@ -48,8 +48,8 @@ const GasPrice = () => {
         <p>{error}</p>
       ) : gasPrice ? (
         <>
-          <p>Current Gas Price: {gasPrice} Gwei</p>
-          <p>Refreshing in {countdown} seconds...</p>
+          <GasPriceText>Current Gas Price: {gasPrice} Gwei</GasPriceText>
+          <CountdownText>Refreshing in {countdown} seconds...</CountdownText>
         </>
       ) : (
         <p>Loading gas price...</p>
